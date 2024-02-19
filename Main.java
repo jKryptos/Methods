@@ -2,14 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MathMethods add = new MathMethods();
-        MathMethods subtract = new MathMethods();
-        MathMethods divide = new MathMethods();
-        MathMethods multiply = new MathMethods();
-        MathMethods randomNumber = new MathMethods();
-        MathMethods itemDrop = new MathMethods();
+        //MathMethods add = new MathMethods();
+        //MathMethods subtract = new MathMethods();
+        //MathMethods divide = new MathMethods();
+        //MathMethods multiply = new MathMethods();
+        //MathMethods randomNumber = new MathMethods();
+        UtilityMethods itemDrop = new UtilityMethods();
 
-        for (int i = 0; i < 10000;i++) {
+        for (int i = 0; i < 100000;i++) {
             //int firstRand = randomNumber.randomNumber();
             //int secondRand = randomNumber.randomNumber();
 
@@ -26,13 +26,12 @@ public class Main {
             //int product = multiply.multiplication(firstRand,secondRand);
             //System.out.println("The product is... " + product);
 
-            boolean itemDropped = itemDrop.dropYesOrNo(0);
-            System.out.println(itemDropped);
-
+            boolean cardDrop = itemDrop.dropYesOrNo(2);
+            System.out.println(cardDrop);
 
             //System.out.println("The numbers were... " + firstRand + " and " + secondRand);
             //UtilityMethods.whiteSpace(1);
         }
-        System.out.println("Total cards dropped: " + MathMethods.dropCounter);
+        System.out.println("Total cards dropped: " + UtilityMethods.dropCounter);
     }
 }
