@@ -2,24 +2,39 @@ import java.util.Random;
 
 public class MathMethods {
 
-    int addition(int firstNumber, int secondNumber){
+    static int dropCounter = 0;
+
+    public int addition(int firstNumber, int secondNumber){
         return firstNumber + secondNumber;
     }
 
-    int subtraction(int firstNumber, int secondNumber){
+    public int subtraction(int firstNumber, int secondNumber){
         return firstNumber - secondNumber;
     }
 
-    int multiplication(int firstNumber, int secondNumber){
+    public int multiplication(int firstNumber, int secondNumber){
         return firstNumber * secondNumber;
     }
 
-    double division(int firstNumber, int secondNumber){
+    public double division(int firstNumber, int secondNumber){
         return (firstNumber * 1.0) / (secondNumber * 1.0);
     }
 
-    int randomNumber(){
+    public int randomNumber(){
         Random rand = new Random();
-        return rand.nextInt(0,1000);
+        return rand.nextInt(1,10000);
+    }
+    public boolean dropYesOrNo(int dropRate){
+
+        boolean drop = true;
+
+        dropRate = dropRate - randomNumber();
+            if(dropRate < 0){
+                drop = false;
+            } else {
+                dropCounter++;
+                System.out.println("-----------------You have found a card!-----------------");
+            }
+        return drop;
     }
 }
