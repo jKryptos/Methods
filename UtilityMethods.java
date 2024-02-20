@@ -15,7 +15,7 @@ public class UtilityMethods {
 
         boolean drop = true;
 
-        dropRate = dropRate - random.randomNumberTenThousand();
+        dropRate = dropRate - random.randomNumberWhole(1,10001);
         if(dropRate < 0){
             drop = false;
         } else {

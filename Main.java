@@ -11,7 +11,7 @@ public class Main {
 
         for (int i = 0; i < 5;i++) {
 
-            Monster basicMonster = new Monster("Basic Monster", randomNumber.randomNumberOneThousand(), 99, randomNumber.randomNumberStartingStatsMaxTwenty(), randomNumber.randomNumberStartingStatsMaxTwenty(), randomNumber.randomNumberStartingStatsMaxTwenty(), randomNumber.randomNumberStartingStatsMaxTwenty(),randomNumber.randomNumberStartingStatsMaxTwenty());
+            Monster basicMonster = new Monster("Basic Monster", randomNumber.randomNumberWhole(500,1000), 99, randomNumber.randomNumberWhole(1,21), randomNumber.randomNumberWhole(1,21), randomNumber.randomNumberWhole(1,21), randomNumber.randomNumberWhole(1,21),randomNumber.randomNumberWhole(1,21));
 
             String basicMob = basicMonster.printMob();
             double damage = basicMonster.damageDealt();
@@ -19,8 +19,8 @@ public class Main {
             System.out.print("Total Damage: ");
             System.out.println(damage);
 
-            //int firstRand = randomNumber.randomNumberTenThousand();
-            //int secondRand = randomNumber.randomNumberTenThousand();
+            //int firstRand = randomNumber.randomNumberWhole(1, 10001);
+            //int secondRand = randomNumber.randomNumberWhole(1, 10001);
 
             //double quotient = divide.division(firstRand, secondRand);
             //System.out.printf("The quotient is... " +  "%.2f", (quotient));
