@@ -24,9 +24,27 @@ public class MathMethods {
         return (firstNumber * 1.0) / (secondNumber * 1.0);
     }
 
-    public int randomNumber(){
+    public int randomNumberTenThousand(){
 
         Random rand = new Random();
-        return rand.nextInt(1,10000);
+        return rand.nextInt(1,10001);
+    }
+
+    public int randomNumberOneThousand(){
+
+        Random rand = new Random();
+        return rand.nextInt(500,1001);
+    }
+
+    public int randomNumberStartingStatsMaxTwenty(){
+
+        Random rand = new Random();
+        return rand.nextInt(1,21);
+    }
+
+    public double randomNumberDecimal(double origin, double bound){
+
+        Random rand = new Random();
+        return rand.nextDouble(origin, bound);
     }
 }

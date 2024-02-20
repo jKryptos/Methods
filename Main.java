@@ -6,12 +6,21 @@ public class Main {
         //MathMethods subtract = new MathMethods();
         //MathMethods divide = new MathMethods();
         //MathMethods multiply = new MathMethods();
-        //MathMethods randomNumber = new MathMethods();
-        UtilityMethods itemDrop = new UtilityMethods();
+        MathMethods randomNumber = new MathMethods();
+        //UtilityMethods itemDrop = new UtilityMethods();
 
-        for (int i = 0; i < 100000;i++) {
-            //int firstRand = randomNumber.randomNumber();
-            //int secondRand = randomNumber.randomNumber();
+        for (int i = 0; i < 5;i++) {
+
+            Monster basicMonster = new Monster("Basic Monster", randomNumber.randomNumberOneThousand(), 99, randomNumber.randomNumberStartingStatsMaxTwenty(), randomNumber.randomNumberStartingStatsMaxTwenty(), randomNumber.randomNumberStartingStatsMaxTwenty(), randomNumber.randomNumberStartingStatsMaxTwenty(),randomNumber.randomNumberStartingStatsMaxTwenty());
+
+            String basicMob = basicMonster.printMob();
+            double damage = basicMonster.damageDealt();
+            System.out.println(basicMob);
+            System.out.print("Total Damage: ");
+            System.out.println(damage);
+
+            //int firstRand = randomNumber.randomNumberTenThousand();
+            //int secondRand = randomNumber.randomNumberTenThousand();
 
             //double quotient = divide.division(firstRand, secondRand);
             //System.out.printf("The quotient is... " +  "%.2f", (quotient));
@@ -26,12 +35,12 @@ public class Main {
             //int product = multiply.multiplication(firstRand,secondRand);
             //System.out.println("The product is... " + product);
 
-            boolean cardDrop = itemDrop.dropYesOrNo(2);
-            System.out.println(cardDrop);
+            //boolean cardDrop = itemDrop.dropYesOrNo(1);
+            //System.out.println(cardDrop);
 
             //System.out.println("The numbers were... " + firstRand + " and " + secondRand);
-            //UtilityMethods.whiteSpace(1);
+            UtilityMethods.whiteSpace(1);
         }
-        System.out.println("Total cards dropped: " + UtilityMethods.dropCounter);
+        //System.out.println("Total cards dropped: " + UtilityMethods.dropCounter);
     }
 }
