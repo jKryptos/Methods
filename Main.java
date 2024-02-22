@@ -6,18 +6,12 @@ public class Main {
         //MathMethods subtract = new MathMethods();
         //MathMethods divide = new MathMethods();
         //MathMethods multiply = new MathMethods();
-        MathMethods randomNumber = new MathMethods();
-        //UtilityMethods itemDrop = new UtilityMethods();
+        //MathMethods randomNumber = new MathMethods();
+        UtilityMethods itemDrop = new UtilityMethods();
+        Monster monster = new Monster();
 
-        for (int i = 0; i < 5;i++) {
-
-            Monster basicMonster = new Monster("Basic Monster", randomNumber.randomNumberWhole(500,1000), 99, randomNumber.randomNumberWhole(1,21), randomNumber.randomNumberWhole(1,21), randomNumber.randomNumberWhole(1,21), randomNumber.randomNumberWhole(1,21),randomNumber.randomNumberWhole(1,21));
-
-            String basicMob = basicMonster.printMob();
-            double damage = basicMonster.damageDealt();
-            System.out.println(basicMob);
-            System.out.print("Total Damage: ");
-            System.out.println(damage);
+        for (int i = 0; i < 1000000;i++) {
+            
 
             //int firstRand = randomNumber.randomNumberWhole(1, 10001);
             //int secondRand = randomNumber.randomNumberWhole(1, 10001);
@@ -35,12 +29,12 @@ public class Main {
             //int product = multiply.multiplication(firstRand,secondRand);
             //System.out.println("The product is... " + product);
 
-            //boolean cardDrop = itemDrop.dropYesOrNo(1);
-            //System.out.println(cardDrop);
+            boolean cardDrop = itemDrop.dropYesOrNo(1);
+            System.out.println(cardDrop);
 
             //System.out.println("The numbers were... " + firstRand + " and " + secondRand);
-            UtilityMethods.whiteSpace(1);
+            //UtilityMethods.whiteSpace(1);
         }
-        //System.out.println("Total cards dropped: " + UtilityMethods.dropCounter);
+        System.out.println("Total cards dropped: " + UtilityMethods.dropCounter);
     }
 }

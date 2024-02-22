@@ -26,16 +26,14 @@ public class Monster {
         this.luck = luck;
         this.accuracy = 50 + (this.dexterity * 7 / 3 / 2) + 8;
         this.baseDamage = 5 + (this.strength * 50) * random.randomNumberDecimal(.025,.035);
+    }
+
+    public Monster(){
 
     }
 
     public String printMob(){
 
         return ("Name: " + this.name + "\nHealth: " + this.healthPoints + "\nStrength: " + this.strength + "\nVitality: " + this.vitality + "\nAgility: " + this.agility + "\nDexterity: " + this.dexterity + "\nIntelligence: " + this.intelligence + "\nLuck: " + this.luck + "\nAccuracy: " + this.accuracy + "\nBase Damage: " + this.baseDamage);
-    }
-
-    public double damageDealt(){
-
-        return ((this.strength * .05 + 2) * (this.baseDamage * .75));
     }
 }
